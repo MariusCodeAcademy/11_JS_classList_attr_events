@@ -18,8 +18,33 @@ inputBtnEl.addEventListener('click', () => {
   // ivesta reiksme turi buti uzpildyta
   if (inputValue.length === 0) {
     console.warn('iveksite reiksme');
+    return;
   }
   // reikme butu min 5 simboliai
+  if (inputValue.length <= 5) {
+    console.warn('minimum 5 simboliai');
+    return;
+  }
+  // reikme butu max 10 simboliu
+  if (inputValue.length >= 10) {
+    console.warn('ne daugiau 10 simboliu');
+    return;
+  }
+
+  // tas pats patikrinimas moderniau
+  // if (
+  //   [
+  //     inputValue.length === 0,
+  //     inputValue.length <= 5,
+  //     inputValue.length >= 10,
+  //   ].includes(true)
+  // ) {
+  //   console.warn('yra klaidu');
+  //   return;
+  // }
+
+  // jei viskas gerai
+  h1El.textContent = inputValue;
 });
 
 // input events
