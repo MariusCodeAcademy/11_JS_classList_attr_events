@@ -11,18 +11,7 @@ const h1El = document.querySelector('h1');
 // console.log(mainInputEl, inputBtnEl);
 // console.log('outEl ===', outEl);
 
-inputBtnEl.addEventListener('click', () => {
-  // console.log('ar veikia');
-  // paimti kas ivesta i input
-  const ivestaReiksme = mainInputEl.value;
-  // iskonsolinti
-  console.log('ivestaReiksme ===', ivestaReiksme);
-  // irasyti gauta reikme i out elementa
-  outEl.textContent = ivestaReiksme;
-  // 2a pratimas
-  // nudazyti h1 elmento fono spalva su ivesties reiksme is input elmento
-  h1El.style.backgroundColor = ivestaReiksme;
-});
+inputBtnEl.addEventListener('click', inputHandler);
 
 // input events
 // kai aktyvuojamas ivesties laukas
@@ -33,9 +22,19 @@ mainInputEl.addEventListener('blur', () => {
   console.log('kai iseinam is sufokusuoto lauko');
 });
 // kai keiciam value - ivedam arba trinam
-mainInputEl.addEventListener('input', () => {
+mainInputEl.addEventListener('input', inputHandler);
+
+// checkbox pazymejimas
+salygaEl.addEventListener('change', () => {
+  console.log('did i change?');
+});
+
+function inputHandler() {
   console.count('kai kazka vedam i inputa');
   // atspausdinti tai kas ivedama
+  /**
+   * @type {string}
+   */
   const ivestaReiksme = mainInputEl.value;
   // irasyti gauta reikme i out elementa
   outEl.textContent = ivestaReiksme;
@@ -43,9 +42,8 @@ mainInputEl.addEventListener('input', () => {
   const textIlgis = ivestaReiksme.length;
   console.log('textIlgis ===', textIlgis);
   ilgisEl.textContent = textIlgis + ' vnt';
-});
 
-// checkbox pazymejimas
-salygaEl.addEventListener('change', () => {
-  console.log('did i change?');
-});
+  // 2a pratimas
+  // nudazyti h1 elmento fono spalva su ivesties reiksme is input elmento
+  h1El.style.backgroundColor = ivestaReiksme;
+}
