@@ -6,6 +6,7 @@ const mainInputEl = document.getElementById('mainInput');
 const inputBtnEl = document.getElementById('inputBtn');
 const outEl = document.getElementById('out');
 const salygaEl = document.getElementById('salyga');
+const ilgisEl = document.getElementById('ilgis');
 const h1El = document.querySelector('h1');
 // console.log(mainInputEl, inputBtnEl);
 // console.log('outEl ===', outEl);
@@ -38,6 +39,10 @@ mainInputEl.addEventListener('input', () => {
   const ivestaReiksme = mainInputEl.value;
   // irasyti gauta reikme i out elementa
   outEl.textContent = ivestaReiksme;
+  // suskaiciuoti koks ivesto stringo ilgis
+  const textIlgis = ivestaReiksme.length;
+  console.log('textIlgis ===', textIlgis);
+  ilgisEl.textContent = textIlgis + ' vnt';
 });
 
 // checkbox pazymejimas
