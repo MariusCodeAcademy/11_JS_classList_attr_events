@@ -1,2 +1,9 @@
 body {
 }
+
+.specialTitle {
+  text-transform: uppercase;
+  font-weight: normal;
+  color: tomato;
+  border-bottom: 1px solid pink;
+}
