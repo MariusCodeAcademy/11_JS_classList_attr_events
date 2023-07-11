@@ -7,3 +7,12 @@ body {
   color: tomato;
   border-bottom: 1px solid pink;
 }
+
+.someOther {
+  background-color: brown;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}

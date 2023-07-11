@@ -12,6 +12,15 @@ h1El.title = 'I am main';
 
 // <h2 id="title">Some title but not class</h2> uzdeti classe
 // specialTitle
+const h2El = document.getElementById('title');
+console.log('h2El ===', h2El);
+console.log('h2El.className ===', h2El.className);
+// h2El.setAttribute('class', 'specialTitle');
+// h2El.className = h2El.className + ' specialTitle';
+// h2El.removeAttribute('class');
 
 // <img id="mainImg" alt="some image"> uzdeti src atributa
-// https://picsum.photos/id/14/800/600
+// https://picsum.photos/id/14/300/600
+const imgEl = document.getElementById('mainImg');
+console.log('imgEl ===', imgEl);
+imgEl.setAttribute('src', 'https://picsum.photos/id/14/300/300');
