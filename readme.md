@@ -34,3 +34,11 @@
    5.1 naujame elemente atsiranda matematine abieju ivesties lauku daugyba
 
    5.2 naujame elemente atsiranda matematine abieju ivesties lauku sudetis
+
+6. Padaryti todo list aplikacija kurio jus galite matyti esamus ir prideti naujus todo elementus.
+
+   6.1. Istrinti todo paspaude istrynimo mygtuka.
+
+   6.2. redaguoti todo paspaude redagavimo mygtuka.
+
+Todo app pavyzdys: https://arberlisaj.github.io/react-todo-app/
